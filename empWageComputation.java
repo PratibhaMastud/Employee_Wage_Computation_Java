@@ -2,9 +2,17 @@ import java.util.*;
 
 class EmpWageComputation{
 
-
 public static void main(String[] args){
+int isPresent=1;
 
-	System.out.println("Welcome Employee Wage Computation..");
+if(isPresent==1){
+	System.out.println("Employee is Present");
+}else
+{
+	        System.out.println("Employee is Abcent");
 }
+
+}
+
+
 }
