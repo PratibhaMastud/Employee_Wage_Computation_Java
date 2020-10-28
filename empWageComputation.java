@@ -1,30 +1,37 @@
 import java.util.*;
+import java.util.Scanner;
 //Author:Pratibha Mastud
-//2.Calculate Daily Employee Wage
+//3.Add PartTime Employee and Wage
 
 class EmpWageComputation{
 
 
-	public static void main(String[] args)
-	{	
-		int wagePerHour = 20;
-		int fullDayHour = 8;
-	//method calling
-		int wageTot = calDailyWage(wagePerHour, fullDayHour);
-	//wagePerHour, fullDayHour are actual parameters
- 
-		System.out.println("Daily Employee Wage = " + wageTot);
-	}
 
-	//user defined method
+  public static void main(String[] args) {
+    int partTimeHour=8;
+    int fullTimeHour=8;
+    int wagePerHour=20;
+    int wageP=0;
+    int wageF=0;
+    Scanner newObj = new Scanner(System.in);  // Create a Scanner object
 
-	//n1 ,n2 are formal parameters
-	
-	public static int calDailyWage(int n1, int n2)   
-	{	
-		int s;
-		s=n1*n2;
-		return s; //returning the sum
+    System.out.println("Enter Employee Time like parttime or fulltime");
+
+    String empTime = newObj.nextLine();  // Read user input
+    
+    if(empTime == "parttime"){
+	wageP=partTimeHour*wagePerHour;
+	System.out.println("Part time Wage : " +wageP);
+    }else{
+		wageF=fullTimeHour*wagePerHour;
+        System.out.println("Part time Wage : " +wageF);
+
 	}
+    
+  }
+
+
+
+
 
 }
