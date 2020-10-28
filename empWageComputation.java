@@ -10,9 +10,13 @@ class EmpWageComputation{
   public static void main(String[] args) {
     int partTimeHour=8;
     int fullTimeHour=8;
+    int workingDayInMonth=20;
     int wagePerHour=20;
     int wageP=0;
     int wageF=0;
+   int monthWagePart=0;
+   int monthWageFull=0;
+
     Scanner newObj = new Scanner(System.in);  // Create a Scanner object
 
     System.out.println("Enter Employee Time like parttime or fulltime");
@@ -23,12 +27,21 @@ class EmpWageComputation{
    switch(empTime){
      
 	   case "parttime":
+		   
 		wageP=partTimeHour*wagePerHour;
-		System.out.println("Part time Wage : " +wageP);
+		 monthWagePart=workingDayInMonth*wageP;
+		System.out.println("Part time Wage Per Day : " +wageP);
+                System.out.println("Part time Wage  per Month : " +monthWageFull);
+
     		break;
 	   case "fulltime":
 		wageF=fullTimeHour*wagePerHour;
-        	System.out.println("Part time Wage : " +wageF);
+        	 monthWageFull=workingDayInMonth*wageF;
+                System.out.println("Full time Wage Per Day : " +wageF);
+                System.out.println("Full time Wage  per Month : " +monthWageFull);
+
+
+
 		break;
 	default:
 		 System.out.println("Invalid Input please enter again");
