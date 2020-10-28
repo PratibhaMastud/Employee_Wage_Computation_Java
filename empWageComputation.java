@@ -1,29 +1,34 @@
 import java.util.*;
 
 //Author:Pratibha Mastud
-//5.Find Employee Wage Computation till Day is reached for month.
+//7.Find Employee Wage Computation Using methods.
 
 class EmpWageComputation{
 
-  public static void main(String[] args) {
-   
-    int fullTimeHour=8;
-    int wagePerHour=20;
-    int wageF=0;
-   int wageDayWise=0;
+  
+public static void main(String[] args)
+	{	
+		int wagePerHour = 20;
+		int fullDayHour = 8;
+		//method calling
+		int wage = calEmployeeWage(wagePerHour, fullDayHour);
 
-   for(int i=1; i<=20; i++){
-	
-	    wageF=fullTimeHour*wagePerHour;
-	    wageDayWise=i*wageF;
-                
+		//wagePerHour, fullDayHour are actual parameters
 
-	    	System.out.println("Full time Wage Per Day : " +wageF);
-                
-		System.out.println("Full time Wage Day wise : "+"Day -"+i+"= "+wageDayWise);
+		System.out.println("Employee Wage = " + wage);
 	}
 
-   }
-    
+	//user defined method
+	
+	//n1 ,n2 are formal parameters
+
+public static int calEmployeeWage(int n1, int n2)   
+{	
+		int wage;
+		wage=n1*n2;
+		return wage; //returning the wage
+}
+
+
 
 }
