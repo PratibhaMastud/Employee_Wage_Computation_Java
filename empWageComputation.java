@@ -1,52 +1,29 @@
 import java.util.*;
-import java.util.Scanner;
+
 //Author:Pratibha Mastud
-//3.Find Employee Wage Computation using switch case
+//5.Find Employee Wage Computation till Day is reached for month.
 
 class EmpWageComputation{
 
-
-
   public static void main(String[] args) {
-    int partTimeHour=8;
+   
     int fullTimeHour=8;
-    int workingDayInMonth=20;
     int wagePerHour=20;
-    int wageP=0;
     int wageF=0;
-   int monthWagePart=0;
-   int monthWageFull=0;
+   int wageDayWise=0;
 
-    Scanner newObj = new Scanner(System.in);  // Create a Scanner object
+   for(int i=1; i<=20; i++){
+	
+	    wageF=fullTimeHour*wagePerHour;
+	    wageDayWise=i*wageF;
+                
 
-    System.out.println("Enter Employee Time like parttime or fulltime");
-
-    String empTime = newObj.nextLine();  // Read user input
-    
-
-   switch(empTime){
-     
-	   case "parttime":
-		   
-		wageP=partTimeHour*wagePerHour;
-		 monthWagePart=workingDayInMonth*wageP;
-		System.out.println("Part time Wage Per Day : " +wageP);
-                System.out.println("Part time Wage  per Month : " +monthWageFull);
-
-    		break;
-	   case "fulltime":
-		wageF=fullTimeHour*wagePerHour;
-        	 monthWageFull=workingDayInMonth*wageF;
-                System.out.println("Full time Wage Per Day : " +wageF);
-                System.out.println("Full time Wage  per Month : " +monthWageFull);
-
-
-
-		break;
-	default:
-		 System.out.println("Invalid Input please enter again");
+	    	System.out.println("Full time Wage Per Day : " +wageF);
+                
+		System.out.println("Full time Wage Day wise : "+"Day -"+i+"= "+wageDayWise);
 	}
+
+   }
     
-  }
 
 }
