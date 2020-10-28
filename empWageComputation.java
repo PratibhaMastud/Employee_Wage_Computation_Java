@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.Scanner;
 //Author:Pratibha Mastud
-//3.Add PartTime Employee and Wage
+//3.Find Employee Wage Computation using switch case
 
 class EmpWageComputation{
 
@@ -19,19 +19,21 @@ class EmpWageComputation{
 
     String empTime = newObj.nextLine();  // Read user input
     
-    if(empTime == "parttime"){
-	wageP=partTimeHour*wagePerHour;
-	System.out.println("Part time Wage : " +wageP);
-    }else{
-		wageF=fullTimeHour*wagePerHour;
-        System.out.println("Part time Wage : " +wageF);
 
+   switch(empTime){
+     
+	   case "parttime":
+		wageP=partTimeHour*wagePerHour;
+		System.out.println("Part time Wage : " +wageP);
+    		break;
+	   case "fulltime":
+		wageF=fullTimeHour*wagePerHour;
+        	System.out.println("Part time Wage : " +wageF);
+		break;
+	default:
+		 System.out.println("Invalid Input please enter again");
 	}
     
   }
-
-
-
-
 
 }
